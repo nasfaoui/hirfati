@@ -5,8 +5,8 @@
 
         <div class="">
             <div class="">
-                <div class=" ">
-                    <h1 class="login-titre">CONNECTER</h1>
+                <div class=" login-container ">
+                    <h1 class="login-titre">CONNECTER </h1>
 
                     <div class="">
                         <form method="POST" action="{{ route('login') }}">

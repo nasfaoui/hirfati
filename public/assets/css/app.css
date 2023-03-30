@@ -25,10 +25,13 @@
 }
 
 .img-bg-login {
-    background-image: url('/public/assets/images/bg-login.png');
+    background-image: url('../images/bg-login.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 600PX;
     width: 100%;
+}
+.login-container{
+    display: flex;
 }
