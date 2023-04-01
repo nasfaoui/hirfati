@@ -1,34 +1,18 @@
-/*   -----------colors----------------- */
-
-:root {
-    --blue: #000080;
-    --white: #F5F5DC;
-    --gray: #C4C3D0;
-    --orange: #FF7F00;
-    --red: #800000;
-}
+@import url('https://fonts.bunny.net/css?family=Nunito');
+@import url('login/login.css');
+@import url('global.css');
 
 
-/* -----------------login----------------- */
 
-.login {
-    background-image: url('public/assets/images/bg-login.png');
-    background-repeat: no-repeat;
-    background-position: center;
+/* ----------------header--------------- */
 
-
-}
-
-.login-titre {
+.header-h1{
     color: var(--blue);
-    font-weight: 400;
 }
 
-.img-bg-login {
-    background-image: url('assets/images/bg-login.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 600PX;
-    width: 100%;
-}
+
+
+
+
+
+

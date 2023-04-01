@@ -12,21 +12,21 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss','resources/css/app.css','resources/js/app.js'])
+    @vite(['resources/sass/app.scss','resources/js/app.js'])
 
     <!-- Style -->
-    <link rel="stylesheet" href="{{ asset('assets/css/app.css') }} ">
+    <link rel="stylesheet" href="../public/assets/css/app.css ">
    
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm m-0  " style="height: 60px;">
+    <div id="app" class="">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm m-0  " style="height: 70px;">
             <div class="container">
                 <a class="navbar-brand row d-flex align-items-center" href="{{ url('/') }}">
-                    <img class="col m-0 p-0" src="{{asset('/assets/images/logo.png')}}" alt="" srcset=""  height="50" >
-                    <h1 class="fw-bold co1 fs-4  col m-0 p-0 pt-2">HIRFATI</h1> 
+                    <img class="col m-0 p-0" src="{{asset('/assets/images/logo.png')}}" alt="" srcset=""  height="66" >
+                    
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

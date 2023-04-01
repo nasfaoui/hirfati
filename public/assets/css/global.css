@@ -1,0 +1,16 @@
+*{
+    font-family: var(--font);
+}
+
+/*   -----------colors----------------- */
+
+:root {
+    --blue: #000080;
+    --white: #ffffff;
+    --gray: #C4C3D0;
+    --gray1:#f1f1f1;
+    --orange: #FF7F00;
+    --red: #800000;
+    --font:'Nunito', sans-serif;
+
+}
