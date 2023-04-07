@@ -1,16 +1,41 @@
-*{
-    font-family: var(--font);
-}
-
 /*   -----------colors----------------- */
 
 :root {
+
+    --black: #010B13;
     --blue: #000080;
-    --white: #ffffff;
     --gray: #C4C3D0;
-    --gray1:#f1f1f1;
+    --white: #ffffff;
+    --white2: #F5F5DC;
     --orange: #FF7F00;
     --red: #800000;
-    --font:'Nunito', sans-serif;
 
 }
+
+/* --------------font--------------- */
+
+@font-face {
+    font-family: 'lato';
+    src: url('../../font/Lato/Lato-Regular.ttf') format('truetype');
+    /* adjust the file path and format to match your font file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lato-bold';
+    src: url('../../font/Lato/Lato-Regular.ttf') format('truetype');
+    /* adjust the file path and format to match your font file */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    font-family: 'lato';
+    margin: 0;
+    padding: 0;
+}
+html {box-sizing: border-box;} 
+ 
+*, *:before, *:after {box-sizing: inherit;}  

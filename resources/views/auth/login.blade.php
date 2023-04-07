@@ -1,24 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="  login ">
+    <div class="login-parent">
+        <div class="  login ">
+            <img src="{{ asset('/assets/images/logo.png') }}" alt="" srcset="">
 
-        <img src="{{ asset('/assets/images/logo1.png') }}" alt="" srcset="">
-
-        <div class=" login-container ">
-            <h1 class="login-titre">CONNECTER </h1>
-
-
-            <form method="POST" action="{{ route('login') }}">
+            <form class="login-container" method="POST" action="{{ route('login') }}">
                 @csrf
+                <h1 class="login-titre">CONNECTER </h1>
 
-                <label for="email" class=" co1">{{ __('E-mail') }}
-                </label>
-
-
-                <input id="email" type="email" class=" @error('email') is-invalid @enderror" name="email"
-                    value="{{ old('email') }}" required autocomplete="email" autofocus>
-
+                <label class="label-email" for="email">{{ __('E-mail') }}</label>
+                <span class="input-con">
+                    {{-- <i class="fa-solid fa-envelope"></i> --}}
+                    <input id="email" placeholder=" &#xf0e0;  taper votre email " type="email"
+                        class=" @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required
+                        autocomplete="email" autofocus>
+                </span>
                 @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -26,33 +23,32 @@
                 @enderror
 
 
+                <label class="label-password" for="password">{{ __('Mot de passe') }}</label>
+                <span>
+                    {{-- <i class="fa-solid fa-lock"></i> --}}
+                    <input id="password" placeholder=" &#xf084;  taper votre mot de passe" type="password"
+                        class=" @error('password') is-invalid @enderror" name="password" required
+                        autocomplete="current-password">
 
-
-                <label for="password" class="">{{ __('Password') }}</label>
-
-
-                <input id="password" type="password" class=" @error('password') is-invalid @enderror" name="password"
-                    required autocomplete="current-password">
-
+                </span>
                 @error('password')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
                 @enderror
 
+                <div>
+                    <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                    <label class="remember" for="remember">
+                        {{ __('Remember Me') }}
+                    </label>
+                </div>
 
 
 
-                <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                <label class="" for="remember">
-                    {{ __('Remember Me') }}
-                </label>
-
-
-
-                <button type="submit" class="">
-                    {{ __('Login') }}
+                <button class="btn-login" type="submit">
+                    {{ __('Se connecter') }}
                 </button>
 
                 @if (Route::has('password.request'))
@@ -61,8 +57,22 @@
                     </a>
                 @endif
 
+                <div class="hr">
+                    <hr>
+                    <h6> connecte avec </h6>
+                    <hr>
+                </div>
+
+                <div class="btn-social">
+                    <button type="button" class="login-with-google-btn">Google</button>
+                    <button type="button" class="login-with-facebook-btn"> 
+                      <i class="facebook fab fa-facebook-f"></i>Facebook</button>
+                </div>
+
+                <span class="inscrire">
+                  <p>Pas encore de compte ? <a href="{{ route('register') }}"> S'inscrire </a></p>
+                </span>
             </form>
         </div>
-
     </div>
 @endsection

@@ -1,0 +1,128 @@
+@import url('../global.css');
+
+.registre {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 350px;
+
+}
+
+.register-con{
+    display: flex;
+    justify-content: center;
+}
+
+.registre-titre {
+    color: var(--blue);
+    font-family: 'lato-bold';
+    margin-bottom: 40px;
+    text-align: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+/* ***********************label************************* */
+.registre label {
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* ----------------------- input --------------------------- */
+
+.registre input[type=text]:focus {
+    border: 2px solid var(--gray);
+
+}
+
+.registre input[type=password]:focus {
+    border: 2px solid var(--gray);
+
+}
+
+.registre input[type=text]:focus {
+    border: 2px solid var(--gray);
+
+}
+
+.registre input[type=password],
+.registre input[type=email],
+.registre input[type=text] {
+
+    border-radius: 5px;
+    border: 0.5px solid var(--gray);
+    background: var(--white);
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    width: 350px;
+    font-family: 'Font Awesome 5 Free', sans-serif;
+    font-weight: 600;
+}
+
+/* ****************** button************************* */
+
+.registre .btn-register {
+    width: 350px;
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 7px;
+    height: 40px;
+    margin: 10px 0 10px 0;
+    font-weight: 500;
+    font-size: larger;
+}
+
+.registre .accepte {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    line-height: normal;
+
+}
+.registre a{
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.registre i{
+    color: var(--blue);
+    font-size: 50px;
+    padding: 10px;
+}
+
+.registre .client-child2{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.registre .client-parent{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.client-parent input[type=radio]{
+   accent-color: var(--blue);
+}
+.client-child {
+    text-align: center;
+}
+.client-child11{
+    background-color: var(--gray);
+}
+.registre .rg{
+    border-radius: 6px;
+
+}
+.registre .rg:hover{
+cursor: pointer;
+background-color: var(--gray);
+}
