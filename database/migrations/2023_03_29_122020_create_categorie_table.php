@@ -13,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('services', function (Blueprint $table) {
-            $table->id('id_service');
-            $table->string('nom_service');
-            $table->string('description');
+        Schema::create('categorie', function (Blueprint $table) {
+            $table->id('id_categorie');
+            $table->string('nom_categorie');
             $table->integer('parent')->nullable();
             $table->foreignId('id_artiste')->constrained('artisans', 'id_artiste')->onDelete('cascade');
             $table->timestamps();

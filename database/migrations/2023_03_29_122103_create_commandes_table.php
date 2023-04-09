@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('commandes', function (Blueprint $table) {
             $table->id('id_commande');
-            $table->foreignId('id_service')->constrained('services', 'id_service')->onDelete('cascade');
-            $table->foreignId('id_client')->constrained('users', 'id_user')->onDelete('cascade');
+            $table->foreignId('id_categorie')->constrained('categorie', 'id_categorie')->onDelete('cascade');
+            $table->foreignId('id_user')->constrained('users', 'id_user')->onDelete('cascade');
             $table->date('date_commande');
             $table->float('montant');
             $table->enum('statut',['terminer','en cour','annuler']);

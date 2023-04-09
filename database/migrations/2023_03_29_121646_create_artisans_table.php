@@ -15,13 +15,17 @@ return new class extends Migration
     {
         Schema::create('artisans', function (Blueprint $table) {
             $table->id('id_artiste');
-            $table->foreignId('id_user')->constrained('users', 'id_user')->onDelete('cascade');
             $table->string('nom');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->string('photo_de_profil')->nullable();
-            $table->float('tarif_horaire');
-            $table->boolean('disponibilite');
+            $table->float('tarif_horaire')->nullable();
+            $table->integer('tele')->unique()->nullable();
+            $table->string('ville');
+            $table->string('email')->unique();
+            $table->boolean('disponibilite')->nullable();
+            $table->string('password');
             $table->timestamps();
+
         });
     }
 

@@ -8,32 +8,23 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id('id_user');
+        Schema::create('admins', function (Blueprint $table) {
+            $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('photo_de_profil')->nullable();
-            $table->string('adresse')->nullable();
-            $table->integer('tele')->unique()->nullable();
             $table->string('password');
-            $table->rememberToken();
             $table->timestamps();
-
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('admin');
     }
 };

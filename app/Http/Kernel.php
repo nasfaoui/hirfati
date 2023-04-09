@@ -43,6 +43,15 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+        'admin' => [
+            'web',
+            \App\Http\Middleware\AdminAuthenticate::class,
+        ],
+
+        'artisan' => [
+            'web',
+            \App\Http\Middleware\ArtisanAuthenticate::class,
+        ],
     ];
 
     /**
@@ -63,5 +72,15 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+    ];
+
+    protected $routeMiddleware = [
+        // ...
+
+        // Add the following to define a middleware for each guard:
+
+        'admin.auth' => \App\Http\Middleware\AdminAuthenticate::class,
+
+        'artisan.auth' => \App\Http\Middleware\ArtisanAuthenticate::class,
     ];
 }

@@ -1,0 +1,87 @@
+
+
+.p{
+    background-color: var(--white);
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
+    color: var(--blue);
+    border-bottom: 1px solid var(--blue);
+    border-color:none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: transparent;
+    
+}
+.nav-link:hover{
+    color: var(--blue);
+    border: none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: transparent;
+    
+}
+.nav-link{
+    color: var(--gray);
+}
+
+.nav {
+width: 270px;
+}
+.tab-content{
+    height: 100%;
+}
+.tab-child {
+display: flex;
+flex-direction: column;
+}
+label {
+    color: var(--black);
+    font-size: 15px;
+}
+h4{
+    color: var(--blue);
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.tab-child input[type=password],
+.tab-child input[type=email],
+.tab-child input[type=text] {
+
+    border-radius: 5px;
+    border: 0.5px solid var(--gray);
+    background: var(--white);
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    width: 350px;
+    font-family: 'Font Awesome 5 Free', sans-serif;
+    font-weight: 600;
+}
+
+.btn-p{
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 7px;
+    height: 40px;
+    width: 150px;
+    font-weight: 500;
+    font-size: 15px;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+

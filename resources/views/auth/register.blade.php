@@ -9,7 +9,7 @@
             
                 <span class="client-parent">
                     <div id="client_child1" class=" rg ">
-                        <input type="radio"   id="client_chek" checked >
+                        <input type="radio" id="client_chek" checked >
                         <div for='client' class="client-child2">
                             <i id="client" class="fas fa-user"></i>
                             <h6>Client</h6>
